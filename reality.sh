@@ -1,8 +1,6 @@
 #!/bin/bash
 #=================================================================
 #  reality.sh — VLESS-REALITY (Xray-core) 一键部署脚本
-#  适配: Alpine(OpenRC) / Debian·Ubuntu(systemd) , x86_64 / arm64
-#  作者用途: NAT VPS 自用节点, 经实测客户端 v2rayNG(Xray v26.x) 通过
 #=================================================================
 set -euo pipefail
 
