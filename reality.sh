@@ -137,7 +137,7 @@ EOF
   # 保存分享信息
   local ip
   ip="$(curl -fsS --max-time 8 https://api.ipify.org 2>/dev/null || echo YOUR_SERVER_IP)"
-  local link="vless://${uuid}@${ip}:${PORT}?encryption=none&flow=xtls-rprx-vision&security=reality&sni=${DEST}&fp=chrome&pbk=${pub}&sid=${sid}&type=tcp#${TAG}"
+  local link="vless://${uuid}@${ip}:${PORT}?encryption=none&flow=xtls-rprx-vision&security=reality&sni=${DEST}&fp=chrome&pbk=${pub}&sid=${sid}&type=tcp#reality"
   cat > "$INFO_FILE" <<EOF
 地址(Address)   : ${ip}
 端口(Port)      : ${PORT}
