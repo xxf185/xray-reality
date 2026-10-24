@@ -7,7 +7,7 @@
 set -euo pipefail
 
 # ---------- 可调默认值 (也可用环境变量覆盖) ----------
-XRAY_VER="${XRAY_VER:-v26.6.27}"        # 与客户端核心保持一致, 避免 REALITY 握手不兼容
+XRAY_VER="${XRAY_VER:-v26.7.28}"        # 与客户端核心保持一致, 避免 REALITY 握手不兼容
 PORT="${PORT:-30810}"                    # 监听端口 (NAT 机请填已映射的外网端口)
 DEST="${DEST:-www.apple.com}"            # REALITY 偷跑目标 (需支持 TLS1.3+H2, 就近大站)
 TAG="${TAG:-}"                           # 节点备注名 (留空则按 IP 位置自动检测, 如 JP-REALITY)
@@ -65,7 +65,7 @@ install_deps(){
 # ---------- 下载 Xray ----------
 install_xray(){
   local url tmp
-  url="https://github.com/XTLS/Xray-core/releases/download/${XRAY_VER}/Xray-linux-${ARCH}.zip"
+  url="https://github.com/xxf185/Xray-core/releases/download/${XRAY_VER}/Xray-linux-${ARCH}.zip"
   tmp="$(mktemp -d)"
   ylw "下载 Xray ${XRAY_VER} (${ARCH}) ..."
   wget -qO "$tmp/x.zip" "$url" || curl -fsSL -o "$tmp/x.zip" "$url" || die "下载失败: $url"
