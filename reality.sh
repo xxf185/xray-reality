@@ -1,6 +1,6 @@
 #!/bin/bash
 #=================================================================
-#  reality.sh — VLESS-REALITY (Xray-core) 一键部署脚本
+#  reality.sh — VLESS-REALITY (Xray-core) 一键脚本
 #=================================================================
 set -euo pipefail
 
